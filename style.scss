@@ -10,8 +10,10 @@ main {
     background-color: color.$color_dark;
 }
 
-.cta {
+a{ // nesting de propriétés pour tous les <a> avec la classe .cta
+    .cta {
     background-color: color.$gradient;
+    }
 }
 
 footer {
