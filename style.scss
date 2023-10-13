@@ -10,6 +10,10 @@ main {
     background-color: color.$color_dark;
 }
 
+.cta {
+    background-color: color.$gradient;
+}
+
 footer {
     @extend .header;
 }

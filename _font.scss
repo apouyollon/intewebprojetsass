@@ -1,3 +1,4 @@
+// création d'un mixin pour modifier la taille et la couleur de la font avec les paramètres
 @mixin font($name:Helvetica, $color:black, $taille:1rem) {
     font-family: $name;
     font-size: $taille;
