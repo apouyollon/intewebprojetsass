@@ -1,0 +1,6 @@
+@mixin font($name:Helvetica, $color:black, $taille:1rem) {
+    font-family: $name;
+    font-size: $taille;
+    font-weight: normal;
+    color: $color;
+    }

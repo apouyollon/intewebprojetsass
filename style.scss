@@ -1,3 +1,15 @@
 @use 'color';
 @use 'font';
 @use 'images';
+
+header {
+    background-color: color.$main_color;
+}
+
+main {
+    background-color: color.$main_color2;
+}
+
+footer {
+    @extend .header;
+}
