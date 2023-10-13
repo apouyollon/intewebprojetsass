@@ -1,6 +1,8 @@
+@use 'sass:color'; // importation nécéssaire pour utiliser color.adjust
+
 // variables couleurs
 $color_main: white;
 $color_dark: #1F2037;
 $color_light: #b2b3f5;
-$gradient : linear-gradient(to bottom, color.adjust($color_light, $lightness: -20%) 0%, $color_light 100%);
+$gradient: linear-gradient(to bottom, color.adjust($color_light, $lightness: -20%) 0%, $color_light 100%);
 // gradient ajuste la couleur sombre en fonction de la couleur claire saisie ($color_light)

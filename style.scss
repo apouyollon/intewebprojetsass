@@ -3,7 +3,7 @@
 @use 'images';
 
 header {
-    background-color: color.$main_color;
+    background-color: color.$color_main;
 }
 
 main {
@@ -15,5 +15,5 @@ main {
 }
 
 footer {
-    @extend .header;
+    @extend header;
 }

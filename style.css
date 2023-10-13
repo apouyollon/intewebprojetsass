@@ -1,1 +1,11 @@
-/*# sourceMappingURL=style.css.map */
+header, footer {
+  background-color: white;
+}
+
+main {
+  background-color: #1F2037;
+}
+
+.cta {
+  background-color: linear-gradient(to bottom, #585ae9 0%, #b2b3f5 100%);
+}/*# sourceMappingURL=style.css.map */
