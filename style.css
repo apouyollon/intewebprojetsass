@@ -1,3 +1,32 @@
+@charset "UTF-8";
+/* création d'un mixin pour modifier la taille et la couleur de la font avec les paramètres
+@mixin font($name:Helvetica, $taille:1rem, $weight:normal, $color:black) {
+    font-family: $name;
+    font-size: $taille;
+    font-weight: $weight;
+    color: $color;
+    }*/
+.text_paragraph {
+  font-family: Verdana;
+  font-size: 1rem;
+  font-weight: normal;
+  color: white;
+}
+
+.middle_title {
+  font-family: Verdana;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.hight title {
+  font-family: Verdana;
+  font-size: 3rem;
+  font-weight: normal;
+  color: white;
+}
+
 header, footer {
   background-color: white;
 }
