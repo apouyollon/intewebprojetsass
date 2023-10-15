@@ -35,7 +35,7 @@ $list_fonts:(
     "color":color.$color_light)
 );
 
-@each $object in $list_fonts { //génère automatiquement les classes à attribuer aux formats de texte avec @extend
+@each $object in $list_fonts { //génère automatiquement les attributs css pour les formats de texte
     #{map.get($object,"name")}{
         font-family: map.get($object,"font-family");
         font-size: map.get($object,"font-size");

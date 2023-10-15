@@ -15,24 +15,41 @@
     align-items: center;
     padding: 5% 10% 5% 10%;
     background-color: $color;
-
-    img {
-        @include images.image($width:25em,$carre:true);
-    }
 }
 .accueil-introduction{
     @include div_parameters($color:color.$color_dark,$row:true);
 
     img {
+        @include images.image($width:30em,$carre:true);
         padding-left: 10%;
     }
+
+    p{
+        margin-bottom: 10%;
+    }
+
 }
 
 .accueil-photos {
     @include div_parameters($color:color.$color_main,$row:false);
+
+    img {
+        @include images.image($width:25em,$carre:true);
+    }
 
     h2 {
         color: color.$color_secondary;
         padding-bottom: 5%;
     }
 }
+
+.section-contact {
+    @include div_parameters($color:color.$color_dark,$row:false);
+
+    h2 {
+        color: color.$color_light;
+        padding-bottom: 5%;
+    }
+
+}
+

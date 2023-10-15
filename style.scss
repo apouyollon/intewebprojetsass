@@ -6,8 +6,15 @@
 @use 'a-propos';
 @use 'portfolio';
 
+
+$width_btn:10em;
+$height_btn:$width_btn/2;
+
 header {
     width:auto;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
     padding:3%;
     background-color: color.$color_main;
 }
@@ -15,8 +22,8 @@ header {
 nav {
     display:flex;
     flex-direction:row;
-    flex-wrap: nowrap;
     justify-content: space-between;
+   
     a {
         text-decoration: none;
         @extend p;
@@ -32,11 +39,18 @@ main {
 }
 
 
-a { // nesting de propriétés pour tous les <a> avec la classe .cta
-    .cta {
-    background-color: color.$gradient;
-    }
+
+.cta {
+    text-decoration: none;
+    justify-content: center;
+    @extend p;
+    height:$height_btn;
+    width:$width_btn;
+    border-radius: $height_btn / 2;
+    background: color.$gradient;
+    padding:2% 5% 2% 5%;
 }
+
 
 em {
     font-style: normal;
