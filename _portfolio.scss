@@ -5,6 +5,12 @@
 .portfolio-section-photos {
     width: 100%;
     background-color: color.$color_main;
+    
+    h2 {
+        padding-left: 5%;
+        color:color.$color_secondary;
+    }
+
 }
 
 .paysages {

@@ -1,27 +1,52 @@
-.text_paragraph {
+p, td, th {
   font-family: Verdana;
   font-size: 1rem;
   font-weight: normal;
   color: white;
 }
 
-.middle_title {
+em {
   font-family: Verdana;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #b2b3f5;
+}
+
+li {
+  font-family: Verdana;
+  font-size: 1rem;
+  font-weight: normal;
   color: white;
 }
 
-.high_title, h1 {
+h2 {
   font-family: Verdana;
-  font-size: 3rem;
-  font-weight: lighter;
+  font-size: 2rem;
+  font-weight: normal;
+  color: white;
+}
+
+h1 {
+  font-family: Verdana;
+  font-size: 4rem;
+  font-weight: 400;
   color: #b2b3f5;
+}
+
+.accueil-photos {
+  background-color: white;
+}
+.accueil-photos h2 {
+  color: black;
 }
 
 .portfolio-section-photos {
   width: 100%;
   background-color: white;
+}
+.portfolio-section-photos h2 {
+  padding-left: 5%;
+  color: black;
 }
 
 .paysages, .portraits {
@@ -42,14 +67,32 @@ header, footer {
   background-color: white;
 }
 
-main {
-  background-color: #1F2037;
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
 nav a {
   text-decoration: none;
 }
 
+main {
+  background-color: #1F2037;
+}
+
 a .cta {
   background-color: linear-gradient(to bottom, #585ae9 0%, #b2b3f5 100%);
+}
+
+em {
+  font-style: normal;
+}
+
+td, th {
+  border: 1px #b2b3f5 solid;
+}
+
+th {
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */

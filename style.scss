@@ -10,19 +10,20 @@ header {
     background-color: color.$color_main;
 }
 
-main {
-    background-color: color.$color_dark;
-}
-
-h1 {
-    @extend .high_title;
-    }
-
 nav {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     a {
         text-decoration: none;
     }
 }
+
+main {
+    background-color: color.$color_dark;
+}
+
 
 a { // nesting de propriétés pour tous les <a> avec la classe .cta
     .cta {
@@ -30,6 +31,19 @@ a { // nesting de propriétés pour tous les <a> avec la classe .cta
     }
 }
 
+em {
+    font-style: normal;
+}
+
+td {
+    @extend p;
+    border: 1px color.$color_light solid;
+}
+
+th {
+    @extend td;
+    font-weight:700;
+}
 
 footer {
     @extend header;

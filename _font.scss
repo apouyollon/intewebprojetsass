@@ -4,27 +4,39 @@
 $font_name:Verdana; // utilisation d'une variable commune à chaque objet
 
 $list_fonts:(
-    ("name":"text_paragraph",
+    ("name":"p",
     "font-family":$font_name,
     "font-size":1rem,
     "font-weight":normal,
     "color":color.$color_main)
 
-    ("name":"middle_title", //utilisable pour boutons
+    ("name":"em",
+    "font-family":$font_name,
+    "font-size":1rem,
+    "font-weight":normal,
+    "color":color.$color_light)
+
+    ("name":"li",
+    "font-family":$font_name,
+    "font-size":1rem,
+    "font-weight":normal,
+    "color":color.$color_main)
+
+    ("name":"h2", //utilisable pour boutons
     "font-family":$font_name,
     "font-size":2rem,
-    "font-weight":bold,
+    "font-weight":normal,
     "color":color.$color_main)
     
-    ("name":"high_title",
+    ("name":"h1",
     "font-family":$font_name,
-    "font-size":3rem,
-    "font-weight":lighter,
+    "font-size":4rem,
+    "font-weight":400,
     "color":color.$color_light)
 );
 
 @each $object in $list_fonts { //génère automatiquement les classes à attribuer aux formats de texte avec @extend
-    .#{map.get($object,"name")}{
+    #{map.get($object,"name")}{
         font-family: map.get($object,"font-family");
         font-size: map.get($object,"font-size");
         font-weight: map.get($object,"font-weight");
