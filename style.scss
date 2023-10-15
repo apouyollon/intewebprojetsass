@@ -7,20 +7,27 @@
 @use 'portfolio';
 
 header {
+    width:auto;
+    padding:3%;
     background-color: color.$color_main;
 }
 
 nav {
     display:flex;
     flex-direction:row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     a {
         text-decoration: none;
+        @extend p;
+        color:color.$color_secondary;
+        padding: 5%;
     }
 }
 
 main {
+    width:100%;
+    height:100%;
     background-color: color.$color_dark;
 }
 
