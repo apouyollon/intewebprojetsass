@@ -1,5 +1,80 @@
+p, td, th {
+  font-family: Verdana;
+  font-size: 1rem;
+  font-weight: normal;
+  color: white;
+}
+
+em {
+  font-family: Verdana;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #b2b3f5;
+}
+
+li {
+  font-family: Verdana;
+  font-size: 1rem;
+  font-weight: normal;
+  color: white;
+}
+
+h2 {
+  font-family: Verdana;
+  font-size: 2rem;
+  font-weight: normal;
+  color: white;
+}
+
+h1 {
+  font-family: Verdana;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #b2b3f5;
+}
+
+.accueil-photos {
+  background-color: white;
+}
+.accueil-photos h2 {
+  color: black;
+}
+
+.portfolio-section-photos {
+  width: 100%;
+  background-color: white;
+}
+.portfolio-section-photos h2 {
+  padding-left: 5%;
+  color: black;
+}
+
+.paysages, .portraits {
+  padding: 5%;
+}
+.paysages img, .portraits img {
+  width: 31.25%;
+  margin-left: auto;
+  height: 17.5em;
+}
+
+.portraits img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 header, footer {
   background-color: white;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+nav a {
+  text-decoration: none;
 }
 
 main {
@@ -7,6 +82,22 @@ main {
 }
 
 a .cta {
+<<<<<<< HEAD
   background-color: red;
   width: 50px;
+=======
+  background-color: linear-gradient(to bottom, #585ae9 0%, #b2b3f5 100%);
+}
+
+em {
+  font-style: normal;
+}
+
+td, th {
+  border: 1px #b2b3f5 solid;
+}
+
+th {
+  font-weight: 700;
+>>>>>>> 04e44ad8b9497302a2d9829eab86a92f70d45046
 }/*# sourceMappingURL=style.css.map */

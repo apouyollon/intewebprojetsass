@@ -1,21 +1,50 @@
+@use 'sass:map';
 @use 'color';
 @use 'font';
 @use 'images';
+@use 'index';
+@use 'a-propos';
+@use 'portfolio';
 
 header {
     background-color: color.$color_main;
+}
+
+nav {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    a {
+        text-decoration: none;
+    }
 }
 
 main {
     background-color: color.$color_dark;
 }
 
-a{ // nesting de propriétés pour tous les <a> avec la classe .cta
+
+a { // nesting de propriétés pour tous les <a> avec la classe .cta
     .cta {
     background-color: red;
     width: 50px;
     
     }
+}
+
+em {
+    font-style: normal;
+}
+
+td {
+    @extend p;
+    border: 1px color.$color_light solid;
+}
+
+th {
+    @extend td;
+    font-weight:700;
 }
 
 footer {

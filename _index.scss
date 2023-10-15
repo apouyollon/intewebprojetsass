@@ -1,1 +1,11 @@
 // un fichier scss pour chaque page html
+@use 'color';
+@use 'images';
+
+.accueil-photos {
+    background-color: color.$color_main;
+
+    h2 {
+        color: color.$color_secondary;
+    }
+}
