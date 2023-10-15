@@ -7,5 +7,6 @@ main {
 }
 
 a .cta {
-  background-color: linear-gradient(to bottom, #585ae9 0%, #b2b3f5 100%);
+  background-color: red;
+  width: 50px;
 }/*# sourceMappingURL=style.css.map */
