@@ -1,14 +1,6 @@
 @use 'sass:map';
 @use 'color';
 
-/* création d'un mixin pour modifier la taille et la couleur de la font avec les paramètres
-@mixin font($name:Helvetica, $taille:1rem, $weight:normal, $color:black) {
-    font-family: $name;
-    font-size: $taille;
-    font-weight: $weight;
-    color: $color;
-    }*/
-
 $font_name:Verdana; // utilisation d'une variable commune à chaque objet
 
 $list_fonts:(
@@ -24,11 +16,11 @@ $list_fonts:(
     "font-weight":bold,
     "color":color.$color_main)
     
-    ("name":"hight title",
+    ("name":"high_title",
     "font-family":$font_name,
     "font-size":3rem,
-    "font-weight":normal,
-    "color":color.$color_main)
+    "font-weight":lighter,
+    "color":color.$color_light)
 );
 
 @each $object in $list_fonts { //génère automatiquement les classes à attribuer aux formats de texte avec @extend

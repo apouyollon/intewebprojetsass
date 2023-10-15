@@ -1,6 +1,10 @@
+@use 'sass:map';
 @use 'color';
 @use 'font';
 @use 'images';
+@use 'index';
+@use 'a-propos';
+@use 'portfolio';
 
 header {
     background-color: color.$color_main;
@@ -10,11 +14,22 @@ main {
     background-color: color.$color_dark;
 }
 
-a{ // nesting de propriétés pour tous les <a> avec la classe .cta
+h1 {
+    @extend .high_title;
+    }
+
+nav {
+    a {
+        text-decoration: none;
+    }
+}
+
+a { // nesting de propriétés pour tous les <a> avec la classe .cta
     .cta {
     background-color: color.$gradient;
     }
 }
+
 
 footer {
     @extend header;

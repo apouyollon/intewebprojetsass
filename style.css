@@ -1,11 +1,3 @@
-@charset "UTF-8";
-/* création d'un mixin pour modifier la taille et la couleur de la font avec les paramètres
-@mixin font($name:Helvetica, $taille:1rem, $weight:normal, $color:black) {
-    font-family: $name;
-    font-size: $taille;
-    font-weight: $weight;
-    color: $color;
-    }*/
 .text_paragraph {
   font-family: Verdana;
   font-size: 1rem;
@@ -20,11 +12,30 @@
   color: white;
 }
 
-.hight title {
+.high_title, h1 {
   font-family: Verdana;
   font-size: 3rem;
-  font-weight: normal;
-  color: white;
+  font-weight: lighter;
+  color: #b2b3f5;
+}
+
+.portfolio-section-photos {
+  width: 100%;
+  background-color: white;
+}
+
+.paysages, .portraits {
+  padding: 5%;
+}
+.paysages img, .portraits img {
+  width: 31.25%;
+  margin-left: auto;
+  height: 17.5em;
+}
+
+.portraits img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 header, footer {
@@ -33,6 +44,10 @@ header, footer {
 
 main {
   background-color: #1F2037;
+}
+
+nav a {
+  text-decoration: none;
 }
 
 a .cta {

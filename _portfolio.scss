@@ -1,1 +1,22 @@
 // un fichier scss pour chaque page html
+@use 'color';
+@use 'images';
+
+.portfolio-section-photos {
+    width: 100%;
+    background-color: color.$color_main;
+}
+
+.paysages {
+    padding: 5%;
+    img {
+        @include images.image($width:25em,$carre:false);
+    }
+}
+
+.portraits {
+    @extend .paysages;
+    img {
+        object-fit: cover;
+    }
+}
