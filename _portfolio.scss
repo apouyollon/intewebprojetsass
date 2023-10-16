@@ -2,20 +2,24 @@
 @use 'color';
 @use 'images';
 
+h1 {
+    padding: 5% 0% 5% 5%;
+}
+
 .portfolio-section-photos {
     width: 100%;
     background-color: color.$color_main;
     
     h2 {
-        padding-left: 5%;
-        margin-top: -0.5%;
+        padding: 5% 0% 0% 5%;
+        margin-top: -5%;
         color:color.$color_secondary;
     }
 
 }
 
 .paysages {
-    padding: 5% 5% 0% 5%; //ahut gauche bas droite
+    padding: 5% 5% 0% 5%; //haut droite bas gauche
     img {
         @include images.image($width:25em,$carre:false);
     }

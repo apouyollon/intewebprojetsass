@@ -1,11 +1,11 @@
 // création d'un mixin pour modifier la taille et la couleur de la font avec les paramètres
 @mixin image($width:20em, $carre:false) {
-    width: $width/80em * 100%;
-    margin-left: auto;
+    width: $width/(3*$width+3) * 100%;
+    padding: 5px;
     @if $carre {
-        height: $width;
+        height: $width/80em * 100%;
     }
     @else {
         height: $width*0.7;
     }
-    }
+}

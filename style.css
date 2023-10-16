@@ -1,4 +1,4 @@
-p, td, th {
+p, nav a, .cta, td, th {
   font-family: Verdana;
   font-size: 1rem;
   font-weight: normal;
@@ -33,11 +33,57 @@ h1 {
   color: #b2b3f5;
 }
 
+.accueil-introduction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5% 10% 5% 10%;
+  background-color: #1F2037;
+}
+.accueil-introduction img {
+  width: 32.2580645161%;
+  padding: 5px;
+  height: 37.5%;
+  padding-left: 10%;
+}
+.accueil-introduction p, .accueil-introduction nav a, nav .accueil-introduction a, .accueil-introduction .cta, .accueil-introduction td, .accueil-introduction th {
+  margin-bottom: 10%;
+}
+
 .accueil-photos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5% 10% 5% 10%;
   background-color: white;
+}
+.accueil-photos img {
+  width: 32.0512820513%;
+  padding: 5px;
+  height: 31.25%;
 }
 .accueil-photos h2 {
   color: black;
+  padding-bottom: 5%;
+}
+
+.section-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5% 10% 5% 10%;
+  background-color: #1F2037;
+}
+.section-contact h2 {
+  color: #b2b3f5;
+  padding-bottom: 5%;
+}
+
+h1 {
+  padding: 5% 0% 5% 5%;
 }
 
 .portfolio-section-photos {
@@ -45,8 +91,8 @@ h1 {
   background-color: white;
 }
 .portfolio-section-photos h2 {
-  padding-left: 5%;
-  margin-top: -0.5%;
+  padding: 5% 0% 0% 5%;
+  margin-top: -5%;
   color: black;
 }
 
@@ -54,8 +100,8 @@ h1 {
   padding: 5% 5% 0% 5%;
 }
 .paysages img, .portraits img {
-  width: 31.25%;
-  margin-left: auto;
+  width: 32.0512820513%;
+  padding: 5px;
   height: 17.5em;
 }
 
@@ -68,27 +114,46 @@ h1 {
 }
 
 header, footer {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3%;
   background-color: white;
 }
 
 nav {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 nav a {
   text-decoration: none;
+  color: black;
+  padding: 5%;
 }
 
 main {
+  width: 100%;
+  height: 100%;
   background-color: #1F2037;
 }
 
+<<<<<<< HEAD
 a .cta {
   padding: 12px 24px;
   color: red;
   border-radius: 6px;
+=======
+.cta {
+  text-decoration: none;
+  justify-content: center;
+  height: 5em;
+  width: 10em;
+  border-radius: 2.5em;
+  background: linear-gradient(to bottom, #8586ef 0%, #b2b3f5 80%, #c9c9f8 100%);
+  padding: 2% 5% 2% 5%;
+>>>>>>> 2723c1e83b8420c091076123ce24a07b43d16372
 }
 
 em {
