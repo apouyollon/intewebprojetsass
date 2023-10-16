@@ -1,6 +1,7 @@
 // un fichier scss pour chaque page html
 @use 'color';
 @use 'images';
+@use 'button';
 
 @mixin div_parameters($color:color.$color_main, $row:false) {
     display:flex;
@@ -28,6 +29,10 @@
         margin-bottom: 10%;
     }
 
+    .cta{
+        @include button.cta($width_btn:10em,$a_link:true);
+    }
+
 }
 
 .accueil-photos {
@@ -50,6 +55,24 @@
         color: color.$color_light;
         padding-bottom: 5%;
     }
+    form {
 
+        label {
+            @extend p;
+        }
+
+        input {
+            width: 30em;
+            margin-left:auto;
+        }
+
+        textarea {
+            width:60em;
+        } 
+    }
+
+    .cta{
+        @include button.cta($width_btn:8em,$a_link:false);
+    }
 }
 
