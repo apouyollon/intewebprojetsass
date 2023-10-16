@@ -86,11 +86,9 @@ main {
 }
 
 a .cta {
-<<<<<<< HEAD
-  background-color: red;
-  width: 50px;
-=======
-  background-color: linear-gradient(to bottom, #585ae9 0%, #b2b3f5 100%);
+  padding: 12px 24px;
+  color: red;
+  border-radius: 6px;
 }
 
 em {
@@ -103,5 +101,4 @@ td, th {
 
 th {
   font-weight: 700;
->>>>>>> 04e44ad8b9497302a2d9829eab86a92f70d45046
 }/*# sourceMappingURL=style.css.map */

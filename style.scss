@@ -27,8 +27,9 @@ main {
 
 a { // nesting de propriétés pour tous les <a> avec la classe .cta
     .cta {
-    background-color: red;
-    width: 50px;
+        padding: 12px 24px;
+        color: red;
+        border-radius: 6px;
     
     }
 }
