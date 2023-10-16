@@ -15,8 +15,13 @@
         display:flex;
         flex-direction: column;
         align-items: center;
+            
+        div{
+            display:flex;
+            flex-wrap: nowrap;
+        }
     }
-    
+
 
     h1 {
         align-self: center;
@@ -24,7 +29,13 @@
     }
 
     .cta{
-        @include button.cta($width_btn:10em,$a_link:true);
+        display:flex;
+        flex-wrap: nowrap;
+        align-self:center;
+        align-items: center;
+        @include button.cta($width_btn:15em,$a_link:true,$long:true);
+        justify-content: center;
+        margin:5% 0% 50% 0%;
     }
 } 
 

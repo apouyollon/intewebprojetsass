@@ -74,6 +74,7 @@ th {
 .cta:hover{ // affiche le bouton en noir et blanc quand survolé
     background:color.$color_main;
     color:color.$color_secondary;
+    transform: scale(1.2);
 }
 
 footer {

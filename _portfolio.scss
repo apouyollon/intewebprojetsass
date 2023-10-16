@@ -16,6 +16,10 @@ h1 {
         color:color.$color_secondary;
     }
 
+    img:hover { // augmente la taille des photos quand survolé
+        transform: scale(1.1);
+    }
+
 }
 
 .paysages {

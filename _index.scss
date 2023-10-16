@@ -17,7 +17,7 @@
     }
 
     .cta{
-        @include button.cta($width_btn:10em,$a_link:true);
+        @include button.cta($width_btn:10em,$a_link:true,$long:false);
     }
 
 }
@@ -27,6 +27,10 @@
 
     img {
         @include images.image($width:25em,$carre:true);
+
+        &:hover { // augmente la taille des photos quand survolé
+            transform: scale(1.1);
+        }
     }
 
     h2 {
@@ -76,7 +80,7 @@
 
     .cta{
         align-self:center;
-        @include button.cta($width_btn:10em,$a_link:false);
+        @include button.cta($width_btn:10em,$a_link:false,$long:false);
         justify-content: center;
     }
 }

@@ -2,18 +2,21 @@
 @use 'font';
 
 //mixin pour créer un bouton
-@mixin cta($width_btn:10em,$a_link:true) {
+@mixin cta($width_btn:10em,$a_link:true,$long:false) {
     text-decoration: none;
     justify-content: center;
     @extend p;
     width:$width_btn;
-    height:$width_btn/2;
-    border-radius: $width_btn / 4;
+    height:$width_btn/4;
+    border-radius: $width_btn / 8;
     background: color.$gradient;
     @if $a_link {
         padding:2% 5% 2% 5%;  
     }
     @else {
         padding:0% 5% 0% 5%; 
+    }
+    @if $long {
+        height:$width_btn/8;
     }
 }
