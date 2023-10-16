@@ -1,23 +1,11 @@
 // un fichier scss pour chaque page html
 @use 'color';
 @use 'images';
+@use 'button';
+@use 'div-parameters';
 
-@mixin div_parameters($color:color.$color_main, $row:false) {
-    display:flex;
-   
-    @if $row {
-       flex-direction: row;
-    }
-    @else {
-        flex-direction: column;
-    }
-    justify-content: space-around;
-    align-items: center;
-    padding: 5% 10% 5% 10%;
-    background-color: $color;
-}
-.accueil-introduction{
-    @include div_parameters($color:color.$color_dark,$row:true);
+.accueil-introduction{ // toutes les sections de la page accueil sont basées sur les paramètres du mixin div_parameters
+    @include div-parameters.div_parameters($color:color.$color_dark,$row:true,$align:center);
 
     img {
         @include images.image($width:30em,$carre:true);
@@ -28,13 +16,21 @@
         margin-bottom: 10%;
     }
 
+    .cta{
+        @include button.cta($width_btn:10em,$a_link:true,$long:false);
+    }
+
 }
 
 .accueil-photos {
-    @include div_parameters($color:color.$color_main,$row:false);
+    @include div-parameters.div_parameters($color:color.$color_main,$row:false,$align:center);
 
     img {
         @include images.image($width:25em,$carre:true);
+
+        &:hover { // augmente la taille des photos quand survolé
+            transform: scale(1.1);
+        }
     }
 
     h2 {
@@ -44,12 +40,48 @@
 }
 
 .section-contact {
-    @include div_parameters($color:color.$color_dark,$row:false);
+    @include div-parameters.div_parameters($color:color.$color_dark,$row:false,$align:center);
 
     h2 {
         color: color.$color_light;
         padding-bottom: 5%;
     }
+    form {display:flex;
+        flex-direction: column;
+        justify-content: center;
 
+        label {
+            @extend p;
+        }
+
+        .form-nom-email { // séparation des inputs et de la textarea pour ajouter de la marge
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3% 0% 3% 0%;
+        }
+
+        .form-column {
+            display:flex;
+            flex-direction: column;
+
+            input { // les inputs ont presque la taille de la textarea/2
+                width: 29em;
+                margin-top:2%;
+            }
+        }
+
+        textarea {
+            width:60em;
+            margin:2% 0% 5% 0%;
+        } 
+    }
+
+    .cta{
+        align-self:center;
+        @include button.cta($width_btn:10em,$a_link:false,$long:false);
+        justify-content: center;
+    }
 }
 

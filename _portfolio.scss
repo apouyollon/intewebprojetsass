@@ -16,6 +16,10 @@ h1 {
         color:color.$color_secondary;
     }
 
+    img:hover { // augmente la taille des photos quand survolé
+        transform: scale(1.1);
+    }
+
 }
 
 .paysages {
@@ -29,6 +33,6 @@ h1 {
     @extend .paysages;
     padding-bottom: 5%;
     img {
-        object-fit: cover;
+        object-fit: cover; // l'image ne se déforme pas mais est rognée
     }
 }

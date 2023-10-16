@@ -1,3 +1,4 @@
+// lien vers chaque fichier sass
 @use 'sass:map';
 @use 'color';
 @use 'font';
@@ -5,10 +6,9 @@
 @use 'index';
 @use 'a-propos';
 @use 'portfolio';
+@use 'button';
 
 
-$width_btn:10em;
-$height_btn:$width_btn/2;
 
 header {
     width:auto;
@@ -20,55 +20,52 @@ header {
 }
 
 nav {
+    width:100%;
     display:flex;
     flex-direction:row;
     justify-content: space-between;
-   
-    a {
-        text-decoration: none;
-        @extend p;
-        color:color.$color_secondary;
-        padding: 5%;
-    }
+
+    div { //nesting de propriété pour toucher la div sans identifiants
+        width:20em;
+        justify-content: flex-end;
+        a {
+            text-decoration: none;
+            @extend p;
+            color:color.$color_secondary;
+            padding: 5%;
+        }
+    } 
 }
 
-main {
+.active {
+    color:color.$color_light; //change la couleur du lien vers la page où se trouve l'utilisateur
+}
+
+main { //définit la largeur de l'écran comme largeur de page
     width:100%;
     height:100%;
     background-color: color.$color_dark;
 }
 
 
-<<<<<<< HEAD
-a { // nesting de propriétés pour tous les <a> avec la classe .cta
-    .cta {
-        padding: 12px 24px;
-        color: red;
-        border-radius: 6px;
-    
-    }
-=======
-
-.cta {
-    text-decoration: none;
-    justify-content: center;
-    @extend p;
-    height:$height_btn;
-    width:$width_btn;
-    border-radius: $height_btn / 2;
-    background: color.$gradient;
-    padding:2% 5% 2% 5%;
->>>>>>> 2723c1e83b8420c091076123ce24a07b43d16372
+em { // ne pas afficher le texte em en italique
+    font-style: normal;
 }
 
-
-em {
-    font-style: normal;
+table {
+    width:80%;
+    border-collapse: collapse; // chaque cellule est imbriquée aux autres
+    align-self: center;
+    margin:3% 0% 8% 0%; 
 }
 
 td {
     @extend p;
+    width: fit-content;
+    padding:3%;
+    height: 5em;
     border: 1px color.$color_light solid;
+    text-align: center; // texte centralisé dans les cellules
 }
 
 th {
@@ -76,6 +73,20 @@ th {
     font-weight:700;
 }
 
+.cta:hover{ // affiche le bouton en noir et blanc quand survolé
+    background:color.$color_main;
+    color:color.$color_secondary;
+    transform: scale(1.2);
+}
+
 footer {
     @extend header;
+
+    div {
+        width:10em;
+        justify-content: flex-end;
+        img {
+            padding: 5%;
+        }
+    } 
 }

@@ -1,0 +1,17 @@
+@use 'color';
+
+@mixin div_parameters($color:color.$color_dark, $row:false, $align:center) {
+    // définit les paramètres généraux d'une div contenant du texte
+    display:flex;
+   
+    @if $row {
+       flex-direction: row;
+    }
+    @else {
+        flex-direction: column;
+    }
+    justify-content: space-around;
+    align-items: $align;
+    padding: 5% 10% 5% 10%;
+    background-color: $color;
+}
