@@ -36,6 +36,10 @@ nav {
     } 
 }
 
+.active {
+    color:color.$color_light; //change la couleur du lien vers la page où se trouve l'utilisateur
+}
+
 main {
     width:100%;
     height:100%;
@@ -48,18 +52,28 @@ em {
 }
 
 table {
+    width:80%;
     border-collapse: collapse;
+    align-self: center;
+    margin:3% 0% 8% 0%; 
 }
 
 td {
     @extend p;
+    width: fit-content;
+    padding:3%;
+    height: 5em;
     border: 1px color.$color_light solid;
-    padding:10%;
 }
 
 th {
     @extend td;
     font-weight:700;
+}
+
+.cta:hover{ // affiche le bouton en noir et blanc quand survolé
+    background:color.$color_main;
+    color:color.$color_secondary;
 }
 
 footer {

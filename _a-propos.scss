@@ -2,32 +2,40 @@
 @use 'color';
 @use 'images';
 @use 'button';
+@use 'div-parameters';
 
-@mixin div_parameters($color:color.$color_dark, $row:false, $align:center) {
-    display:flex;
-   
-    @if $row {
-       flex-direction: row;
-    }
-    @else {
-        flex-direction: column;
-    }
-    justify-content: space-around;
-    align-items: $align;
-    padding: 5% 10% 5% 10%;
-    background-color: $color;
-}
 
 .a-propos-main{
     display:flex;
     flex-direction: column;
     align-items: center;
+
+    section {
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+    h1 {
+        align-self: center;
+        padding: 0%;
+    }
+
+    .cta{
+        @include button.cta($width_btn:10em,$a_link:true);
+    }
 } 
 
 .carre-contenu {
-    @include div_parameters($color:color.$color_dark,$row:false,$align:left);
-}
+    @include div-parameters.div_parameters($color:color.$color_dark,$row:false,$align:left);
+    margin:0% 22% 5% 22%;
+    border-right:1px color.$color_light solid;
+    border-bottom:1px color.$color_light solid;
 
-.cta{
-    @include button.cta($width_btn:10em,$a_link:true);
+    h2 {
+        align-self: center;
+        padding-bottom: 10%;
+    }
 }

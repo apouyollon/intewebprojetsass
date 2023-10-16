@@ -2,23 +2,10 @@
 @use 'color';
 @use 'images';
 @use 'button';
+@use 'div-parameters';
 
-@mixin div_parameters($color:color.$color_main, $row:false) {
-    display:flex;
-   
-    @if $row {
-       flex-direction: row;
-    }
-    @else {
-        flex-direction: column;
-    }
-    justify-content: space-around;
-    align-items: center;
-    padding: 5% 10% 5% 10%;
-    background-color: $color;
-}
 .accueil-introduction{
-    @include div_parameters($color:color.$color_dark,$row:true);
+    @include div-parameters.div_parameters($color:color.$color_dark,$row:true,$align:center);
 
     img {
         @include images.image($width:30em,$carre:true);
@@ -36,7 +23,7 @@
 }
 
 .accueil-photos {
-    @include div_parameters($color:color.$color_main,$row:false);
+    @include div-parameters.div_parameters($color:color.$color_main,$row:false,$align:center);
 
     img {
         @include images.image($width:25em,$carre:true);
@@ -49,30 +36,48 @@
 }
 
 .section-contact {
-    @include div_parameters($color:color.$color_dark,$row:false);
+    @include div-parameters.div_parameters($color:color.$color_dark,$row:false,$align:center);
 
     h2 {
         color: color.$color_light;
         padding-bottom: 5%;
     }
-    form {
+    form {display:flex;
+        flex-direction: column;
+        justify-content: center;
 
         label {
             @extend p;
         }
 
-        input {
-            width: 30em;
-            margin-left:auto;
+        .form-nom-email {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3% 0% 3% 0%;
+        }
+
+        .form-column {
+            display:flex;
+            flex-direction: column;
+
+            input {
+                width: 29em;
+                margin-top:2%;
+            }
         }
 
         textarea {
             width:60em;
+            margin:2% 0% 5% 0%;
         } 
     }
 
     .cta{
-        @include button.cta($width_btn:8em,$a_link:false);
+        align-self:center;
+        @include button.cta($width_btn:10em,$a_link:false);
+        justify-content: center;
     }
 }
 
