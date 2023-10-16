@@ -1,6 +1,5 @@
 // un fichier scss pour chaque page html
 @use 'color';
-@use 'images';
 @use 'button';
 @use 'div-parameters';
 
@@ -39,7 +38,7 @@
     }
 } 
 
-.carre-contenu {
+.carre-contenu { // paramètres généraux définits dans le mixin div_parameters
     @include div-parameters.div_parameters($color:color.$color_dark,$row:false,$align:left);
     margin:0% 22% 5% 22%;
     border-right:1px color.$color_light solid;

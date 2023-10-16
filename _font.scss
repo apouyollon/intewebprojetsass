@@ -3,6 +3,9 @@
 
 $font_name:Verdana; // utilisation d'une variable commune à chaque objet
 
+//font alternative
+// $font_name:Georgia;
+
 $list_fonts:(
     ("name":"p",
     "font-family":$font_name,

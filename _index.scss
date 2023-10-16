@@ -4,7 +4,7 @@
 @use 'button';
 @use 'div-parameters';
 
-.accueil-introduction{
+.accueil-introduction{ // toutes les sections de la page accueil sont basées sur les paramètres du mixin div_parameters
     @include div-parameters.div_parameters($color:color.$color_dark,$row:true,$align:center);
 
     img {
@@ -54,7 +54,7 @@
             @extend p;
         }
 
-        .form-nom-email {
+        .form-nom-email { // séparation des inputs et de la textarea pour ajouter de la marge
             display:flex;
             flex-direction: row;
             justify-content: space-between;
@@ -66,7 +66,7 @@
             display:flex;
             flex-direction: column;
 
-            input {
+            input { // les inputs ont presque la taille de la textarea/2
                 width: 29em;
                 margin-top:2%;
             }

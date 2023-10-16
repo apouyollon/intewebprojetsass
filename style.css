@@ -1,3 +1,8 @@
+/* $color_main: #ffecff;
+$color_secondary : #000984;
+$color_dark: #321f37;
+$color_light: #deb2f5;
+$gradient: linear-gradient(to bottom, color.adjust($color_light, $lightness: -10%)0%, $color_light 80%, color.adjust($color_light, $lightness: 5%) 100%); */
 p, nav div a, td, th, .a-propos-main .cta, .accueil-introduction .cta, .section-contact form label, .section-contact .cta {
   font-family: Verdana;
   font-size: 1rem;
@@ -267,6 +272,7 @@ td, th {
   padding: 3%;
   height: 5em;
   border: 1px #b2b3f5 solid;
+  text-align: center;
 }
 
 th {

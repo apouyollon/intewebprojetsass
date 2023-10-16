@@ -17,4 +17,9 @@ Proposer et mettre en oeuvre des micro-interactions :   2pts
 La note est sur 20.
 
 
+Proposition de micro-interactions : 
+    changement de la couleur du lien vers la page où se trouve l'utilisateur
+    agrandissement et changement de la couleur d'un bouton quand survolé
+    agrandissement d'une photo quand survolée sauf (photo page accueil)
 
+Méthodes de travail : chacun travaille sur une page ou un élément puis enchaîne en fontion de la vitesse d'avancement (laisse la possibilité que chaque membre travaille indépendamment)

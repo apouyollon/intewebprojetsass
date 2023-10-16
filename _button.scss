@@ -5,7 +5,7 @@
 @mixin cta($width_btn:10em,$a_link:true,$long:false) {
     text-decoration: none;
     justify-content: center;
-    @extend p;
+    @extend p; // utilisation de l'attribut texte paragraphe dans les boutons
     width:$width_btn;
     height:$width_btn/4;
     border-radius: $width_btn / 8;
@@ -16,7 +16,7 @@
     @else {
         padding:0% 5% 0% 5%; 
     }
-    @if $long {
+    @if $long { // conditionelle supplémentaire pour un bouton dont le contenu textuel est plus long que les autres
         height:$width_btn/8;
     }
 }

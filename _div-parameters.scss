@@ -1,6 +1,7 @@
 @use 'color';
 
 @mixin div_parameters($color:color.$color_dark, $row:false, $align:center) {
+    // définit les paramètres généraux d'une div contenant du texte
     display:flex;
    
     @if $row {

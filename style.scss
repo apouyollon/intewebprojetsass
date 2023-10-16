@@ -1,3 +1,4 @@
+// lien vers chaque fichier sass
 @use 'sass:map';
 @use 'color';
 @use 'font';
@@ -23,8 +24,8 @@ nav {
     display:flex;
     flex-direction:row;
     justify-content: space-between;
-   
-    div {
+
+    div { //nesting de propriété pour toucher la div sans identifiants
         width:20em;
         justify-content: flex-end;
         a {
@@ -40,20 +41,20 @@ nav {
     color:color.$color_light; //change la couleur du lien vers la page où se trouve l'utilisateur
 }
 
-main {
+main { //définit la largeur de l'écran comme largeur de page
     width:100%;
     height:100%;
     background-color: color.$color_dark;
 }
 
 
-em {
+em { // ne pas afficher le texte em en italique
     font-style: normal;
 }
 
 table {
     width:80%;
-    border-collapse: collapse;
+    border-collapse: collapse; // chaque cellule est imbriquée aux autres
     align-self: center;
     margin:3% 0% 8% 0%; 
 }
@@ -64,6 +65,7 @@ td {
     padding:3%;
     height: 5em;
     border: 1px color.$color_light solid;
+    text-align: center; // texte centralisé dans les cellules
 }
 
 th {
